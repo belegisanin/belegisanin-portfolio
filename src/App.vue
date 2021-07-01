@@ -70,7 +70,15 @@
         <p>- {{ randomQuote.author }}</p>
       </div>
     </div>
-    <div class="content"></div>
+    <div class="content">
+      <div class="about-wrapper">
+        <h1>About Me</h1>
+        <p>
+          I'm a full-stack web developer/UX & UI designer and mobile app
+          developer from Serbia.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -285,5 +293,24 @@ body {
 .content {
   width: 100%;
   min-height: 100vh;
+}
+
+/* About Me */
+
+.about-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 8em 16em;
+  font-family: "Lora", serif;
+  color: white;
+}
+.about-wrapper h1 {
+  font-weight: 300;
+  font-size: 7em;
+  width: 100%;
+}
+.about-wrapper p {
+  font-size: 4em;
+  margin-top: 1em;
 }
 </style>
