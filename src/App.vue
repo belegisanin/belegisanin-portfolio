@@ -1,4 +1,29 @@
 <template>
+  <div id="preload" :class="{ 'preload-hidden': state.loaded }">
+    <svg
+      id="preload-logo"
+      viewBox="0 0 289 373"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M152.95 200.67V301.43C152.95 314.27 147.863 324.373 137.69 331.74C127.517 339.107 114.267 342.793 97.94 342.8H42.02V29.24H100.36C115.867 29.24 128.51 33.0033 138.29 40.53C148.07 48.0567 152.957 57.9167 152.95 70.11V155.17H194.95V67.27C194.95 47.6233 186.787 31.5 170.46 18.9C154.133 6.3 133.377 0 108.19 0H0V372H108.21C133.203 372 153.91 365.7 170.33 353.1C186.75 340.5 194.963 324.373 194.97 304.72V200.67H152.95Z"
+        fill="currentColor"
+      />
+      <path
+        d="M228.86 207.11C227.49 188.2 226.14 168.26 225.51 149.5L197.29 163.5H132.71C132.76 173.21 133.53 182.66 134 192.27H197.94L228.86 207.11Z"
+        fill="currentColor"
+      />
+      <path
+        d="M100.36 37.6H85.96V334.44H97.96C111.43 334.44 122.5 331.63 130.96 326.17V192.32H135.09C134.61 182.71 134.45 173.26 134.41 163.55H130.96V45.6C122.98 40.31 112.73 37.6 100.36 37.6Z"
+        fill="currentColor"
+      />
+      <path
+        d="M272.05 195.41L233.86 177.34L269.46 161.65C281.54 154.983 287.58 146.743 287.58 136.93V26.38C287.58 18.62 284.247 12.2866 277.58 7.37997C270.913 2.47331 262.283 0.0166459 251.69 0.00997925H154.21C161.854 3.12477 169.045 7.25162 175.59 12.28C181.874 17.0617 187.371 22.7979 191.88 29.28H242.27V141.28L224.59 149.98C225.22 168.73 226.59 187.79 227.92 206.7L243.59 214.19V342.8H191.82C187.273 349.287 181.739 355.023 175.42 359.8C168.854 364.819 161.651 368.945 154 372.07H252.95C263.523 372.07 272.153 369.613 278.84 364.7C285.527 359.787 288.86 353.453 288.84 345.7V219.18C288.86 208.4 283.263 200.477 272.05 195.41Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
   <div id="container">
     <nav class="top-nav">
       <div class="logo-wrapper">
@@ -78,7 +103,7 @@
     </div>
     <div class="content">
       <div class="about-wrapper">
-        <video autoplay loop muted>
+        <video autoplay loop muted data-aos="fade-left">
           <source
             src="https://belegisanin.sirv.com/Portfolio_Videos/Timelapse-1.mp4"
             type="video/mp4"
@@ -89,6 +114,43 @@
           <p data-aos="fade-up">
             I'm a full-stack web developer/UX & UI designer and mobile app
             developer from Serbia.
+          </p>
+        </div>
+      </div>
+      <div class="work-wrapper">
+        <h1 data-aos="fade-up">My work</h1>
+        <div class="grid-container">
+          <div class="area1 work-tile" data-aos="fade-down-right">
+            <div class="tile">agroasistent</div>
+          </div>
+          <div class="area2 work-tile" data-aos="fade-down">
+            <div class="tile"></div>
+          </div>
+          <div class="area3 work-tile" data-aos="fade-down-left">
+            <div class="tile"></div>
+          </div>
+          <div class="area4 work-tile" data-aos="fade-left">
+            <div class="tile">more coming soon...</div>
+          </div>
+          <div class="area5 work-tile" data-aos="fade-up-right">
+            <div class="tile"></div>
+          </div>
+          <div class="area6 work-tile" data-aos="fade-up-left">
+            <div class="tile"></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact">
+          <h1 data-aos="fade-up">Contact me</h1>
+          <p data-aos="fade-up">
+            You can email me at
+            <a href="mailto:belegisanin@outlook.com">belegisanin@outlook.com</a>
+            or you can send me a message on
+            <a href="https://twitter.com/belegisanind">twitter</a>. While you're
+            at it, you can also visit my
+            <a href="https://github.com/belegisanin">github</a> page. I hope I
+            will hear from you soon.
           </p>
         </div>
       </div>
@@ -123,7 +185,7 @@ const state = reactive({
       quote: "Never trust a <u>computer</u> you can’t throw out a window.",
       author: "Steve Wozniak, Electronics Engineer & Programmer",
       video:
-        "https://belegisanin.sirv.com/Portfolio_Videos/Galaxy%20-%20318%20Sparkvideo-1.mp4",
+        "https://belegisanin.sirv.com/Portfolio_Videos/pexels-cottonbro-7858274_SparkVideo.mp4", //Done
     },
     {
       quote:
@@ -194,6 +256,7 @@ const state = reactive({
         "https://belegisanin.sirv.com/Portfolio_Videos/Tesla%20Coil%20Demonstration%20Sparkvideo-1.mp4", //Done
     },
   ],
+  loaded: false,
 });
 
 function randomInt(max, min) {
@@ -205,6 +268,18 @@ const randomQuote = computed(
 );
 
 onMounted(() => {
+  const preloader = document.getElementById("preload");
+
+  document.onreadystatechange = function () {
+    if (document.readyState == "complete") {
+      state.loaded = true;
+    }
+  };
+
+  preloader.addEventListener("animationend", () => {
+    preloader.style.display = "none";
+  });
+
   AOS.init();
 });
 </script>
@@ -227,6 +302,30 @@ body {
   color: black;
   background: rgb(215, 215, 215);
 }
+
+/* Preloader */
+
+#preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  z-index: 9999;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#preload-logo {
+  width: 3em;
+  color: white;
+  animation: preload-logo 0.5s infinite alternate ease-in-out;
+}
+
+/* Site */
+
 .top-nav {
   width: 100%;
   height: 8em;
@@ -330,7 +429,6 @@ body {
   height: 60%;
   filter: grayscale(1);
 }
-
 .about-wrapper h1 {
   font-weight: 300;
   font-size: 7em;
@@ -339,5 +437,145 @@ body {
 .about-wrapper p {
   font-size: 4em;
   margin-top: 1em;
+}
+
+/* Work */
+
+.work-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 9em 15em;
+  font-family: "Lora", serif;
+  color: white;
+}
+.work-wrapper h1 {
+  font-size: 7em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+.grid-container {
+  box-sizing: content-box;
+  width: 100%;
+  height: 750px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "area1 area1 area2 area3"
+    "area1 area1 area4 area4"
+    "area5 area6 area6 area6";
+}
+.work-tile {
+  color: white;
+  font-size: 2em;
+}
+.work-tile .tile {
+  width: 100%;
+  height: 100%;
+  padding: 0.8em;
+  transition: background 0.15s ease;
+}
+.work-tile .tile:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.area1 {
+  width: 100%;
+  height: 100%;
+  grid-area: area1;
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-width: 2px 0px 2px 2px;
+  font-size: 4em;
+}
+.area2 {
+  width: 100%;
+  height: 100%;
+  grid-area: area2;
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-width: 2px 0px 2px 2px;
+}
+.area3 {
+  width: 100%;
+  height: 100%;
+  grid-area: area3;
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-width: 2px 2px 2px 2px;
+}
+.area4 {
+  width: 100%;
+  height: 100%;
+  grid-area: area4;
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-width: 0px 2px 2px 2px;
+}
+.area5 {
+  width: 100%;
+  height: 100%;
+  grid-area: area5;
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-width: 0px 2px 2px 2px;
+}
+.area6 {
+  width: 100%;
+  height: 100%;
+  grid-area: area6;
+  border-style: solid;
+  border-color: rgb(230, 230, 230);
+  border-width: 0px 2px 2px 0px;
+}
+
+/* Contact */
+
+.contact-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 8em 15em;
+  font-family: "Lora", serif;
+  color: white;
+}
+.contact {
+  width: 100%;
+  height: 100%;
+}
+.contact h1 {
+  font-size: 7em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+}
+.contact p {
+  font-size: 3em;
+}
+.contact p a {
+  color: white;
+}
+
+/* Animation */
+
+.preload-hidden {
+  animation: preload-hide 1s ease forwards;
+}
+
+@keyframes preload-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes preload-logo {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
 </style>
