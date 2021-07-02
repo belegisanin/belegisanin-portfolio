@@ -27,7 +27,7 @@
       </div>
       <ul>
         <li><a href="#">about me</a></li>
-        <li><a href="#">work</a></li>
+        <li><a href="#">my work</a></li>
         <li><a href="#">contact</a></li>
       </ul>
     </nav>
@@ -66,25 +66,41 @@
         <source :src="randomQuote.video" type="video/mp4" />
       </video>
       <div class="quote-wrapper">
-        <q v-html="randomQuote.quote"></q>
-        <p>- {{ randomQuote.author }}</p>
+        <q
+          v-html="randomQuote.quote"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        ></q>
+        <p data-aos="fade-up" data-aos-duration="1000">
+          - {{ randomQuote.author }}
+        </p>
       </div>
     </div>
     <div class="content">
       <div class="about-wrapper">
-        <h1>About Me</h1>
-        <p>
-          I'm a full-stack web developer/UX & UI designer and mobile app
-          developer from Serbia.
-        </p>
+        <video autoplay loop muted>
+          <source
+            src="https://belegisanin.sirv.com/Portfolio_Videos/Timelapse-1.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="about">
+          <h1 data-aos="fade-up">About Me</h1>
+          <p data-aos="fade-up">
+            I'm a full-stack web developer/UX & UI designer and mobile app
+            developer from Serbia.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { reactive, computed } from "vue";
+import { reactive, computed, onMounted } from "vue";
 import { useMouse } from "@vueuse/core";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const { x, y } = useMouse({ touch: false });
 
@@ -187,6 +203,10 @@ function randomInt(max, min) {
 const randomQuote = computed(
   () => state.quotes[randomInt(0, state.quotes.length)]
 );
+
+onMounted(() => {
+  AOS.init();
+});
 </script>
 
 <style>
@@ -304,6 +324,13 @@ body {
   font-family: "Lora", serif;
   color: white;
 }
+.about-wrapper video {
+  position: absolute;
+  right: 16em;
+  height: 60%;
+  filter: grayscale(1);
+}
+
 .about-wrapper h1 {
   font-weight: 300;
   font-size: 7em;
