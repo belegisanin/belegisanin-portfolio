@@ -51,9 +51,9 @@
         </svg>
       </div>
       <ul>
-        <li><a href="#">about me</a></li>
-        <li><a href="#">my work</a></li>
-        <li><a href="#">contact</a></li>
+        <li><a href="#about">about me</a></li>
+        <li><a href="#work">my work</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
     <nav class="side-nav">
@@ -115,7 +115,7 @@
       </div>
     </div>
     <div class="content">
-      <div class="about-wrapper">
+      <div class="about-wrapper" id="about">
         <video autoplay loop muted data-aos="fade-left">
           <source
             src="https://belegisanin.sirv.com/Portfolio_Videos/Timelapse-1.mp4"
@@ -130,7 +130,7 @@
           </p>
         </div>
       </div>
-      <div class="work-wrapper">
+      <div class="work-wrapper" id="work">
         <h1 data-aos="fade-up">My work</h1>
         <div class="grid-container">
           <div class="area1 work-tile" data-aos="fade-down-right">
@@ -153,7 +153,7 @@
           </div>
         </div>
       </div>
-      <div class="contact-wrapper">
+      <div class="contact-wrapper" id="contact">
         <div class="contact">
           <h1 data-aos="fade-up">Contact me</h1>
           <p data-aos="fade-up">
@@ -286,7 +286,7 @@ const state = reactive({
   loaded: false,
 });
 
-function randomInt(max, min) {
+function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
