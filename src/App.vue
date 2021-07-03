@@ -315,6 +315,8 @@ onMounted(() => {
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap");
 
+@import url("./assets/css/style_laptop_m.css");
+
 * {
   margin: 0;
   padding: 0;

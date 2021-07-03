@@ -1,0 +1,77 @@
+@media screen and (max-width: 1024px) {
+  .top-nav {
+    height: 5.5em !important;
+  }
+  .top-nav svg {
+    height: 5.5em !important;
+    padding: 1em !important;
+  }
+  .top-nav ul {
+    font-size: 1em !important;
+  }
+  .side-nav {
+    width: 4.5em !important;
+  }
+  .side-nav-link {
+    width: 60% !important;
+  }
+  .quote-wrapper q {
+    font-size: calc(3.5em - 50%) !important;
+  }
+  .quote-wrapper p {
+    font-size: 1.85em !important;
+  }
+
+  /* About Me*/
+
+  .about-wrapper {
+    padding: 8em 10em !important;
+  }
+  .about-wrapper video {
+    right: 12em !important;
+  }
+  .about-wrapper h1 {
+    font-size: 5.5em !important;
+  }
+  .about-wrapper p {
+    font-size: 3em !important;
+    margin-top: 1em;
+  }
+
+  /* Work */
+
+  .work-wrapper {
+    padding: 8em 12em !important;
+  }
+  .work-wrapper h1 {
+    font-size: 5.5em !important;
+  }
+  .grid-container {
+    height: 550px !important;
+  }
+  .work-tile {
+    font-size: 1.7em !important;
+  }
+  .area1 {
+    font-size: 2.2em !important;
+  }
+
+  /* Contact */
+
+  .contact-wrapper {
+    padding: 8em 10em !important;
+  }
+  .contact h1 {
+    font-size: 5.5em !important;
+  }
+  .contact p {
+    font-size: 2.5em !important;
+  }
+
+  /* Footer */
+
+  footer {
+    padding: 4em !important;
+    font-size: 0.8em !important;
+  }
+}
