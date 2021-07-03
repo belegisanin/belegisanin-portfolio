@@ -57,7 +57,13 @@
       </ul>
     </nav>
     <nav class="side-nav">
-      <a href="https://github.com/belegisanin" class="side-nav-link">
+      <a
+        href="https://github.com/belegisanin"
+        class="side-nav-link"
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+      >
+        <span class="visually-hidden">GitHub Page (Opens in new tab.)</span>
         <svg viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M17.8 0.2C8.6 1.2 1.2 8.6 0.200003 17.6C-0.799997 27 4.6 35.4 12.8 38.6C13.4 38.8 14 38.4 14 37.6V34.4C14 34.4 13.2 34.6 12.2 34.6C9.4 34.6 8.2 32.2 8 30.8C7.8 30 7.4 29.4 6.8 28.8C6.2 28.6 6 28.6 6 28.4C6 28 6.6 28 6.8 28C8 28 9 29.4 9.4 30C10.4 31.6 11.6 32 12.2 32C13 32 13.6 31.8 14 31.6C14.2 30.2 14.8 28.8 16 28C11.4 27 8 24.4 8 20C8 17.8 9 15.6 10.4 14C10.2 13.6 10 12.6 10 11.2C10 10.4 10 9.2 10.6 8C10.6 8 13.4 8 16.2 10.6C17.2 10.2 18.6 10 20 10C21.4 10 22.8 10.2 24 10.6C26.6 8 29.6 8 29.6 8C30 9.2 30 10.4 30 11.2C30 12.8 29.8 13.6 29.6 14C31 15.6 32 17.6 32 20C32 24.4 28.6 27 24 28C25.2 29 26 30.8 26 32.6V37.8C26 38.4 26.6 39 27.4 38.8C34.8 35.8 40 28.6 40 20.2C40 8.2 29.8 -1.2 17.8 0.2Z"
@@ -65,7 +71,13 @@
           />
         </svg>
       </a>
-      <a href="https://twitter.com/belegisanind" class="side-nav-link">
+      <a
+        href="https://twitter.com/belegisanind"
+        class="side-nav-link"
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+      >
+        <span class="visually-hidden">Twitter Page (Opens in new tab.)</span>
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM18.464 9.535C18.47 9.668 18.473 9.8 18.473 9.932C18.473 14 15.378 18.688 9.717 18.688C7.978 18.688 6.361 18.179 5 17.305C5.241 17.334 5.486 17.347 5.735 17.347C7.178 17.347 8.504 16.856 9.556 16.029C8.209 16.004 7.072 15.114 6.681 13.892C6.869 13.928 7.062 13.947 7.26 13.947C7.541 13.947 7.814 13.909 8.071 13.839C6.663 13.557 5.602 12.313 5.602 10.822C5.602 10.809 5.602 10.796 5.602 10.783C6.017 11.014 6.491 11.152 6.996 11.168C6.171 10.617 5.627 9.674 5.627 8.607C5.627 8.042 5.778 7.513 6.043 7.06C7.561 8.922 9.829 10.148 12.386 10.276C12.334 10.051 12.307 9.816 12.307 9.575C12.307 7.876 13.685 6.497 15.384 6.497C16.269 6.497 17.069 6.871 17.63 7.469C18.331 7.33 18.99 7.075 19.585 6.722C19.355 7.441 18.867 8.043 18.231 8.425C18.853 8.351 19.446 8.186 19.999 7.941C19.588 8.559 19.067 9.1 18.464 9.535Z"
@@ -74,6 +86,7 @@
         </svg>
       </a>
       <a href="mailto:belegisanin@outlook.com" class="side-nav-link">
+        <span class="visually-hidden">Send an email. (Opens mail client.)</span>
         <svg
           viewBox="0 0 300 300"
           fill="none"
@@ -155,6 +168,20 @@
         </div>
       </div>
     </div>
+    <footer>
+      <p>Author: Dragan Belegišanin</p>
+      <p>2020/2021 &copy; Copyright: belegisanin</p>
+      <a href="#" class="back-to-top">Back To Top</a>
+      <p>
+        Stock Footage:
+        <a href="https://www.youtube.com/channel/UC060L2YXizeMJwAVDoiVjhg"
+          >Aleksandar Milutinović</a
+        >;
+        <a href="https://www.youtube.com/channel/UCfUCIeKeSko0fOnv2LtQkoA"
+          >Pablo Camacho</a
+        >
+      </p>
+    </footer>
   </div>
 </template>
 
@@ -206,7 +233,7 @@ const state = reactive({
         "It is only when they go wrong that <u>machines</u> remind you how <u>powerful</u> they are.",
       author: "Clive James, Broadcaster & Journalist",
       video:
-        "https://belegisanin.sirv.com/Portfolio_Videos/Network%20-%2014906%20Sparkvideo-1.mp4", //Done
+        "https://belegisanin.sirv.com/Portfolio_Videos/Network%20-%2014906%20Sparkvideo-1.mp4",
     },
     {
       quote:
@@ -555,6 +582,27 @@ body {
   color: white;
 }
 
+/* Footer */
+footer {
+  width: 100%;
+  padding: 5em;
+  color: rgb(125, 125, 125);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Lora", serif;
+}
+footer p {
+  text-align: center;
+}
+footer a {
+  color: rgb(180, 180, 180);
+  text-align: center;
+}
+footer .back-to-top {
+  margin: 1em;
+}
+
 /* Animation */
 
 .preload-hidden {
@@ -577,5 +625,30 @@ body {
   to {
     transform: scale(1.2);
   }
+}
+
+/* Accessibility */
+
+.visually-hidden {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(
+    1px 1px 1px 1px
+  ); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(
+    1px,
+    1px,
+    1px,
+    1px
+  ); /*maybe deprecated but we need to support legacy browsers */
+  clip-path: inset(
+    50%
+  ); /*modern browsers, clip-path works inwards from each corner*/
+  white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
 </style>
