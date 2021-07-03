@@ -31,10 +31,10 @@
     right: 12em !important;
   }
   .about-wrapper h1 {
-    font-size: 5.5em !important;
+    font-size: 5.2em !important;
   }
   .about-wrapper p {
-    font-size: 3em !important;
+    font-size: 2.3em !important;
     margin-top: 1em;
   }
 
@@ -44,7 +44,7 @@
     padding: 8em 12em !important;
   }
   .work-wrapper h1 {
-    font-size: 5.5em !important;
+    font-size: 5.2em !important;
   }
   .grid-container {
     height: 550px !important;
@@ -59,13 +59,13 @@
   /* Contact */
 
   .contact-wrapper {
-    padding: 8em 10em !important;
+    padding: 8em 11em !important;
   }
   .contact h1 {
-    font-size: 5.5em !important;
+    font-size: 5.2em !important;
   }
   .contact p {
-    font-size: 2.5em !important;
+    font-size: 2.3em !important;
   }
 
   /* Footer */
