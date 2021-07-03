@@ -1,0 +1,69 @@
+@media screen and (max-width: 768px) {
+  .landing video {
+    height: 50% !important;
+  }
+  .quote-wrapper {
+    width: 60% !important;
+  }
+  .quote-wrapper q {
+    font-size: calc(3em - 50%) !important;
+  }
+  .quote-wrapper p {
+    font-size: 1.6em !important;
+  }
+
+  /* About Me*/
+
+  .about-wrapper {
+    padding: 8em 10em !important;
+  }
+  .about-wrapper video {
+    margin-right: auto !important;
+    margin-left: auto !important;
+    height: 50% !important;
+  }
+  .about-wrapper h1 {
+    font-size: 4.6em !important;
+  }
+  .about-wrapper p {
+    font-size: 2.2em !important;
+  }
+
+  /* Work */
+
+  .work-wrapper {
+    padding: 8em 10em !important;
+  }
+  .work-wrapper h1 {
+    font-size: 4.6em !important;
+  }
+  .grid-container {
+    height: 550px !important;
+  }
+  .work-tile {
+    font-size: 1.65em !important;
+    line-break: loose;
+  }
+  .area1 {
+    font-size: 2em !important;
+  }
+
+  /* Contact */
+
+  .contact-wrapper {
+    padding: 8em 10em !important;
+  }
+  .contact h1 {
+    font-size: 4.6em !important;
+  }
+  .contact p {
+    font-size: 2em !important;
+  }
+
+  /* Footer */
+
+  footer {
+    padding: 3em !important;
+    font-size: 0.7em !important;
+  }
+}

@@ -316,6 +316,7 @@ onMounted(() => {
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap");
 
 @import url("./assets/css/style_laptop_m.css");
+@import url("./assets/css/style_tablet_portrait.css");
 
 * {
   margin: 0;
