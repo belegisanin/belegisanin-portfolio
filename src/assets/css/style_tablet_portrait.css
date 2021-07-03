@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
   .landing video {
-    height: 50% !important;
+    height: auto !important;
+    width: 50% !important;
   }
   .quote-wrapper {
     width: 60% !important;
@@ -20,7 +21,8 @@
   .about-wrapper video {
     margin-right: auto !important;
     margin-left: auto !important;
-    height: 50% !important;
+    height: auto !important;
+    width: 50% !important;
   }
   .about-wrapper h1 {
     font-size: 4.6em !important;
