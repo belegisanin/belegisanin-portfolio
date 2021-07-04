@@ -317,6 +317,8 @@ onMounted(() => {
 
 @import url("./assets/css/style_laptop_m.css");
 @import url("./assets/css/style_tablet_portrait.css");
+@import url("./assets/css/style_mobile_l.css");
+@import url("./assets/css/style_mobile_s.css");
 
 * {
   margin: 0;
@@ -357,9 +359,9 @@ body {
 /* Site */
 
 .top-nav {
-  width: 100%;
+  width: 100% !important;
   height: 8em;
-  position: fixed;
+  position: fixed !important;
   display: flex;
   align-items: center;
   z-index: 50;
@@ -394,6 +396,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 49;
 }
 .side-nav-link {
   width: 55%;

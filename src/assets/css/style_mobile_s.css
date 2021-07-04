@@ -1,0 +1,82 @@
+@media screen and (max-width: 320px) {
+  .top-nav {
+    background-color: black !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  .side-nav {
+    display: none !important;
+  }
+  .landing video {
+    height: auto !important;
+    width: 70% !important;
+  }
+  .quote-wrapper {
+    width: 70% !important;
+  }
+  .quote-wrapper q {
+    font-size: calc(2.2em - 50%) !important;
+  }
+  .quote-wrapper p {
+    font-size: 1em !important;
+  }
+
+  /* About Me*/
+
+  .about-wrapper {
+    padding: 4em 3em !important;
+    min-height: 50vh !important;
+  }
+  .about-wrapper video {
+    position: absolute !important;
+    left: 20vw !important;
+    width: 60% !important;
+  }
+  .about-wrapper h1 {
+    font-size: 2.5em !important;
+  }
+  .about-wrapper p {
+    font-size: 1.2em !important;
+  }
+
+  /* Work */
+
+  .work-wrapper {
+    padding: 4em 3em !important;
+    min-height: 70vh !important;
+  }
+  .work-wrapper h1 {
+    font-size: 2em !important;
+  }
+  .grid-container {
+    height: 300px !important;
+  }
+  .work-tile {
+    font-size: 1em !important;
+    line-break: loose !important;
+  }
+  .area1 {
+    font-size: 1em !important;
+  }
+
+  /* Contact */
+
+  .contact-wrapper {
+    padding: 4em 3em !important;
+    min-height: 70vh !important;
+  }
+  .contact h1 {
+    font-size: 2.5em !important;
+  }
+  .contact p {
+    font-size: 1em !important;
+  }
+
+  /* Footer */
+
+  footer {
+    padding: 2.8em !important;
+    font-size: 0.5em !important;
+  }
+}
